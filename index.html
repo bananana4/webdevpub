@@ -61,6 +61,8 @@
             position: relative;
         }
         .middle{
+            animation-name: rainbow;
+            animation-duration:7s;
             background: repeating-linear-gradient(
       45deg,
       black 0px,
@@ -74,6 +76,26 @@
             padding: 5px 5% 5px 5%;
             margin-bottom: 10px;
             margin-left: 15px;
+        }
+        @keyframes rainbow{
+            0%{
+                background: repeating-linear-gradient(
+      45deg,
+      black 0px,
+      rgb(19, 59, 19) 40px,
+      rgb(54, 253, 54) 40px,
+      black 80px
+    );
+            }
+            100%{
+                background: repeating-linear-gradient(
+      45deg,
+      white 0px,
+      #FD36FD 40px,
+      #ffc4ff 40px,
+      white 80px
+    );
+            }
         }
     .right{
 
