@@ -64,7 +64,7 @@
             animation-name: rainbow;
             animation-duration:7s;
             animation-fill-mode: forwards;
-    
+            animation-iteration-count: infinite;
             color: #fff;
             box-shadow: 0px 0px 25px rgb(255, 225, 143), 0px 0px 15px rgb(215, 244, 255);
 
@@ -82,19 +82,31 @@
       black 80px
     );
             }
-            50%{
+            25%{
                 opacity: 0.5;
             }
-            100%{
+            50%{
                 background: repeating-linear-gradient(
       45deg,
       white 0px,
       #FD36FD 40px,
       #ffc4ff 40px,
       white 80px
+    );}
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        background: repeating-linear-gradient(
+      45deg,
+      black 0px,
+      rgb(19, 59, 19) 40px,
+      rgb(54, 253, 54) 40px,
+      black 80px
     );
+    }
             }
-        }
+        
     .right{
 
     
