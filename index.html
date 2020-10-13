@@ -62,7 +62,7 @@
             animation-fill-mode: forwards;
             animation-iteration-count: infinite;
             color: #fff;
-            box-shadow: 0px 0px 25px rgb(255, 225, 143), 0px 0px 15px rgb(215, 244, 255);
+            box-shadow: 0px 0px 25px darkblue, 0px 0px 15px rgb(215, 244, 255);
 
             padding: 5px 5% 5px 5%;
             margin-bottom: 10px;
@@ -71,17 +71,22 @@
         @keyframes rainbow{
             0%{
                 background: repeating-linear-gradient(
-      45deg,
-      black 5px
-      royalblue 5px
+                    45deg,
+      black 0px,
+      black 40px,
+      royalblue 40px,
+      royalblue 80px
                 )
         
     }
     100%{
         background: repeating-linear-gradient(
-            45deg
-            royalblue 5px
-            black 5px
+            
+            45deg,
+      royalblue 0px,
+      royalblue 40px,
+      black 40px,
+      black 80px
 
 
         )
