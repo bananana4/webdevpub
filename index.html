@@ -15,31 +15,57 @@
         #bg{
             
             background: rgb(250,255,235);
-            
+            display:grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-gap: 10px;
+            grid-template-areas:
+            "advert header"
+            "advert content"
+            "advert footer";
         }
-        #mh{
-            padding: 3fr;
-            margin: 5px auto;
-            background: radial-gradient(circle, rgb(255, 252, 248) 17%, rgb(27, 86, 109) 17%);            
+        .text{
             font-family: 'Major Mono Display', monospace;
             color: yellow;
             text-align: center;
             font-family: 'Nova Mono', monospace;
-            position: sticky;
-            display: grid;
+        }
+        .item1 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
 
-        }
-        #mein{
-            padding: 50%;
-           /* background: linear-gradient(180deg, rgba(250,255,235,1) 0%, rgba(185,255,253,1) 35%, rgba(0,212,255,1) 100%);*/
-            margin: 5fr auto;
-            background: radial-gradient(circle, rgba(255,16,16,1) 0%, rgba(3,23,22,1) 35%, rgba(205,9,9,1) 100%);
-        }
-        hr{
-            color:darkcyan;
+  .item2 {
+    background: LightSalmon;
+    grid-area: advert;
+  }
+
+  .item3 {
+    background: PaleTurquoise;
+    grid-area: content;
+    
+  }
+
+  .item4 {
+    background: lightpink;
+    grid-area: footer;
+            
         }
     </style> 
-<main id="mein"><hr></main>
+<!--<main id="mein">
+    <div id="bg">
+        <div>
+
+        </div>
+    </div>
+</main>-->
+<div id="bg"class="text">
+    <div class="item1">header</div>
+    <div class="item2">advert</div>
+    <div class="item3">content</div>
+    <div class="item4">footer</div>
+  </div>
+
 
 </body>
 </html>
