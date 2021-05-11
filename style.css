@@ -28,14 +28,42 @@
     border-right-width: 1px;
     border-bottom-width: 1px;
 
+}}
+.lada{
+    display: flex;
+    background-color: #f91b5d;
+    flex-direction:row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding: 3px;
+    
 }
-.fontt{
+.lada > div{
+    background-color: #f1f1f1;
+  width:32%;
+  margin: 1px;
+  text-align: center;
+  padding: 2px;
+  color:coral;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width:600px){ .lada > div{
+    height: 1%;
     font-size: 3px;
+}}
+@media screen and (max-width:600px){ .lada{
+    height: auto;
+    margin:3px
+    
 }
 }
+
 /*middle box*/
 main{
-    margin-top: 10%;
+    margin-top: 9%;
     width: 70%;
     background-color:white;
     padding: 5px;
@@ -50,11 +78,14 @@ main{
     border:solid #fb6692;
     border-right-width: 50px;
     border-bottom-width: 25px;
+    border-top-width: 6px;
+    border-left-width: 6px;
 }
 .wel{
     width: 70%;
     margin-left: 15% ;
     margin-right: 15%;
+    margin-top: 20px;
 }
 /*bg*/
 body{
