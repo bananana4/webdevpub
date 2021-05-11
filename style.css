@@ -13,23 +13,43 @@
     
     background-color:  #fee3f8;
     text-align: center;
-    padding-bottom: 10px;
     
+    
+}
+@media screen and (max-width:600px){#bux .header{
+    height: 5px;
+    font-size: 5px;
+
+}}
+
+@media screen and (max-width:600px){.border{
+    border-radius: 10px;
+    
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+
+}
+.fontt{
+    font-size: 3px;
+}
 }
 /*middle box*/
 main{
-    margin-top: 125px;
+    margin-top: 10%;
     width: 70%;
     background-color:white;
     padding: 5px;
     left:0px;
     margin-left: 15% ;
     margin-right: 15%;
+   
+    
+}
+.border{
     border-radius: 10px;
     border:solid #fb6692;
     border-right-width: 50px;
     border-bottom-width: 25px;
-    
 }
 .wel{
     width: 70%;
@@ -46,6 +66,7 @@ body{
 
 .header{
     color:#fb66dc;
+    margin:1%;
 }
 pre{
     text-align: left;
@@ -53,3 +74,15 @@ pre{
 p{
     columns: 35px 2;
 }
+
+.flex{
+    display: flex;
+  background-color: #f91b5d;
+  flex-direction: column-reverse;
+}
+.flex > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
