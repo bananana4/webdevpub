@@ -10,7 +10,7 @@
     position:fixed;
     top:0px;
     width:99%;
-    
+    justify-content: center;
     background-color:  #fee3f8;
     text-align: center;
     
@@ -19,7 +19,7 @@
 @media screen and (max-width:600px){#bux .header{
     height: 5px;
     font-size: 5px;
-
+    justify-content: center;
 }}
 
 @media screen and (max-width:600px){.border{
@@ -59,6 +59,11 @@
     margin:3px
     
 }
+}
+@media screen and (max-width:600px){.border{
+    width: 65%;
+}
+    
 }
 
 /*middle box*/
@@ -116,4 +121,11 @@ p{
     margin: 10px;
     padding: 20px;
     font-size: 30px;
+  }
+  @media screen and (max-width:600px){.flex > div{
+    
+    padding: 10px;
+    font-size: 10px;
+  }
+      
   }
