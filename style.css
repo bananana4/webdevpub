@@ -6,7 +6,7 @@
     
 }
 /*top box*/
-#bux{
+/*#bux{
     position:fixed;
     top:0px;
     width:99%;
@@ -71,17 +71,19 @@
     width: 65%;
 }
     
-}
+}*/
 
-/*middle box*/
-main{
+/*middle box*/ 
+/*main{
     margin-top: 9%;
-    width: 70%;
+    width: 100%;
     background-color:white;
-    padding: 5px;
+    padding: 2px;
     left:0px;
-    margin-left: 15% ;
+    margin-left: 0% ;
     margin-right: 15%;
+    right: 5px;
+    
    
     
 }
@@ -106,10 +108,12 @@ main{
     margin-right: 15%;
     margin-top: 20px;
 }
-/*bg*/
-body{
-    background-color: #ba4ddb;
-}
+/*bg*/ 
+
+
+/*body{
+    background-color: #ececec;
+}*/
 .textleft{
     text-align: left;
 }
@@ -147,13 +151,176 @@ p{
   img{
       width: 500px;
   }
-  /* bottom */
+  /* bottom */ 
   .up{
       position: fixed;
       width: 50px;
       height: 50px;
       right: 57px;
       bottom: 10px;
+  } 
+
+  header{
+     
+    overflow: hidden;
+}
+ 
+#top-header{
+         
+    text-align: center;
+    height: 105px;
+    background-color: rgb(255, 255, 255);
+}
+
+  #logo{
+    float: left;
+    padding: none;
+    margin: none;
+    height: 10%;
+    width: 10%;
+}
+ 
+#logo img{
+    width: 60%;
+    float: left;
+    padding: 10px 0px;
+}   
+
+#menu{
+    float: right;
+    width: 70%;
+    height: 100%;
+    margin: none;
+}
+     
+#menu ul{
+    text-align: center;
+    float: right;
+    margin: none;
+    background: #ff8a3c;
+    
+}
+     
+#menu li{
+    display: inline-block;
+    padding: none;
+    margin: none;
+}
+     
+#menu li a, #menu li span{
+    display: inline-block;
+    padding: 0em 1.5em;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+     
+#menu li a{
+         
+    color: #FFF;
+}
+     
+#menu li:hover a, #menu li span{
+    background: #FFF;
+    color: #a1a1a1;
+    border-left: 1px solid #a1a1a1;
+    text-decoration: none;
+}
+
+
+
+.imageContainer {
+    width: 100%;
+    height: 600px;
+    background-image: url(https://randomwordgenerator.com/img/picture-generator/55e3d1444b52ae14f1dc8460962e33791c3ad6e04e5074417c2f7dd59e4cc6_640.jpg);
+    image-rendering:pixelated;
+    background-size:100% 600px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+   
+    
+}
+#inbetween{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: sticky;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    
+}
+.imageContainertwo {
+    width: 100%;
+    height: 600px;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd.wattpad.com%2Fstory_parts%2F29%2Fimages%2F153b3dec005d48fa790083691048.jpg&f=1&nofb=1);
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: justify;
+    background-size: 100% 600px;
+}
+
+.gridcont{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    height:2500px;
+    
+}
+
+.gridcont > a {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    height: 75%;
+    width: 75%;
+    background-image: url("https://pixabay.com/get/g903551450cf8eedd38a56e4e363c0b63210679d311a76e016cb927fb06e947bc4ef69f23ee21ea065fa97bef1a79a2b1_640.jpg");
   }
 
- 
+  .gridit:hover{
+      opacity: 50%;
+  }
+
+  /*.info{
+      height: 25%;
+      width: 100%;
+      opacity: 75%;
+      background-color: white;
+      
+      width: 75%;
+      height: 25%;
+      padding-bottom: 20px;
+      opacity: 0%;
+      margin-bottom: 0%;
+      
+  }
+  .gridit:hover .info{
+      opacity: 100%;
+  }*/
+
+  #anime{
+      height: 200px;
+      width: 200px;
+      background-color: cornflowerblue;
+      animation: animo 5s infinite;
+      text-align: center;
+  }
+
+  @keyframes animo{
+from{background-color: cornflowerblue; font-size: 2px; float:left;}
+to{background-color: crimson; font-size: 40px;float: right;}
+
+  }
+
+ #picc{
+     width:100px;
+     height: 200px;
+ }
