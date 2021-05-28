@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
-    
+    <script src="anime.js"></script>
+    <script src="anime.min.js"></script>
+    <script src="anime.es.js"></script>
     <link rek="stylesheet" href ="navbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
@@ -54,7 +55,22 @@
            <a href="item.html" class="gridit"> <div >15</div></a>
             
         </div>
-        <input  type="button" id="btnPrev" value="Previous">
-  <input type="button" id="btnNext" value="Next">
+        <script>
+            const hver = document.getElementsByClassName("gridit");
+
+const zoom = () => {
+  anime({
+    targets: hver,
+    width: '100%',
+    scale:{
+      delay: 800,
+      value: 1.5
+    },
+    duration:1500
+  })
+}
+
+on.addEventListener("mouseover", hver);
+        </script>
 </body>
 </html>

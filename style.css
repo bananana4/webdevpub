@@ -233,7 +233,7 @@ p{
 .imageContainer {
     width: 100%;
     height: 600px;
-    background-image: url(https://randomwordgenerator.com/img/picture-generator/55e3d1444b52ae14f1dc8460962e33791c3ad6e04e5074417c2f7dd59e4cc6_640.jpg);
+    background-image: url(https://randomwordgenerator.com/img/picture-generator/53e2d3454252a914f1dc8460962e33791c3ad6e04e50744074267bd59e44cd_640.jpg);
     image-rendering:pixelated;
     background-size:100% 600px;
     text-align: center;
@@ -257,7 +257,7 @@ p{
 .imageContainertwo {
     width: 100%;
     height: 600px;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd.wattpad.com%2Fstory_parts%2F29%2Fimages%2F153b3dec005d48fa790083691048.jpg&f=1&nofb=1);
+    background-image: url(https://randomwordgenerator.com/img/picture-generator/57e2d6414c51af14f1dc8460962e33791c3ad6e04e507441722978d6934cc3_640.jpg);
     text-align: center;
     font-size: 16px;
     margin-bottom: 10px;
@@ -282,7 +282,7 @@ p{
     font-size: 30px;
     height: 75%;
     width: 75%;
-    background-image: url("https://pixabay.com/get/g903551450cf8eedd38a56e4e363c0b63210679d311a76e016cb927fb06e947bc4ef69f23ee21ea065fa97bef1a79a2b1_640.jpg");
+    background-image: url("https://randomwordgenerator.com/img/picture-generator/55e7dc434957a814f1dc8460962e33791c3ad6e04e507440742a7ad6964bc1_640.jpg");
   }
 
   .gridit:hover{
@@ -324,3 +324,102 @@ to{background-color: crimson; font-size: 40px;float: right;}
      width:100px;
      height: 200px;
  }
+
+  /* https://www.youtube.com/watch?v=NdftnCDwKaU&list=PLKcDjNb_OGwMmRul5T03xG68DS8C4MeZ3&index=3 */
+ :root{
+    --boxColor: #0ff7;
+}
+
+ .bg{
+     background-color: #000;
+     min-height: 100vh;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 75px;
+     perspective: 10em;
+     perspective-origin:50% calc(50% - 2em) ;
+ }
+
+ .scene{
+     position: relative;
+     transform-style:preserve-3d ;
+ }
+ .ball{
+     width:1em;
+     height:1em;
+     border-radius: 50%;
+     background:lightblue;
+     position: absolute;
+     left: -.5em;
+     bottom:1em;
+     background-image: radial-gradient(
+         circle at top,
+         lightblue,
+         #000
+     );
+ }
+
+ .ballShadow{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     
+     background-image: radial-gradient(#0007, #0000 50%);
+ }
+
+ .Cube{
+     width: 2em;
+     height: 2em;
+    
+
+     position: absolute;
+     top:-1em;
+     left:-1em;
+ }
+
+ .left, .right, .front, .back{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: var(--boxColor);
+    box-shadow:0 0 0.5em #000a inset ;
+}
+.front{transform:translateZ(1em);}
+.right{transform:rotateY(90deg) translateZ(1em);}
+.back{transform:rotateY(180deg) translateZ(1em);}
+.left{transform:rotateY(270deg) translateZ(1em);}
+ 
+.top{
+    position: absolute;
+    width:2em;
+    height:2em;
+    background: var(--boxColor);
+    transform: translateY(-50%) rotateX(90deg);
+    box-shadow:0 0 0.5em #000a inset ;
+}
+
+.bottom{
+    position: absolute;
+    width:2em;
+    height:2em;
+    background: #0007;
+    bottom:0;
+    transform: translateY(50%) rotateX(90deg);
+    box-shadow:0 0 0.5em #000a;
+}
+
+.floor{
+     width: 15em;
+     height: 15em;
+     background-image:
+     radial-gradient(#0000, #000 75%),
+      repeating-conic-gradient(from 45deg, #111 0deg 90deg,#222 90deg 180deg);
+     background-size:100%, 1em 1em;
+    position: absolute;
+    transform:translate(-50%,-50%)
+    rotateX(90deg);
+    top:1em;
+
+ }
+ 
