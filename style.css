@@ -5,115 +5,7 @@
     font-family: 'Nova Mono', monospace;
     
 }
-/*top box*/
-/*#bux{
-    position:fixed;
-    top:0px;
-    width:99%;
-    justify-content: center;
-    background-color:  #e06ee0;
-    text-align: center;
-    transition: 0.1s;
-    
-    
-}
-@media screen and (max-width:600px){#bux .header{
-    height: 5px;
-    font-size: 5px;
-    justify-content: center;
-}}
 
-@media screen and (max-width:600px){.border{
-    border-radius: 10px;
-    
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-
-}}
-.lada{
-    display: flex;
-    background-color: #4f176c;
-    flex-direction:row;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 5px;
-    padding: 3px;
-    
-    
-}
-
-.lada a{
-    color: #7d29c6;
-}
-
-.lada > div{
-    background-color: #f1f1f1;
-  width:32%;
-  margin: 1px;
-  text-align: center;
-  padding: 2px;
-  
-  border-radius: 10%;
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width:600px){ .lada > div{
-    height: 1%;
-    font-size: 3px;
-}}
-@media screen and (max-width:600px){ .lada{
-    height: auto;
-    margin:3px
-    
-}
-}
-@media screen and (max-width:600px){.border{
-    width: 65%;
-}
-    
-}*/
-
-/*middle box*/ 
-/*main{
-    margin-top: 9%;
-    width: 100%;
-    background-color:white;
-    padding: 2px;
-    left:0px;
-    margin-left: 0% ;
-    margin-right: 15%;
-    right: 5px;
-    
-   
-    
-}
-
-@media screen and (max-width:200px){main{
-    margin-top: 15;
-}
-    
-}
-
-.border{
-    border-radius: 10px;
-    border:solid #8d209b;
-    border-right-width: 50px;
-    border-bottom-width: 25px;
-    border-top-width: 6px;
-    border-left-width: 6px;
-}
-.wel{
-    width: 70%;
-    margin-left: 15% ;
-    margin-right: 15%;
-    margin-top: 20px;
-}
-/*bg*/ 
-
-
-/*body{
-    background-color: #ececec;
-}*/
 .textleft{
     text-align: left;
 }
@@ -188,14 +80,16 @@ p{
 
 #menu{
     float: right;
+    margin-right: 1em;
     width: 70%;
     height: 100%;
     margin: none;
+    
 }
      
 #menu ul{
     text-align: center;
-    float: right;
+    float:center;
     margin: none;
     background: #ff8a3c;
     
@@ -289,36 +183,9 @@ p{
       opacity: 50%;
   }
 
-  /*.info{
-      height: 25%;
-      width: 100%;
-      opacity: 75%;
-      background-color: white;
-      
-      width: 75%;
-      height: 25%;
-      padding-bottom: 20px;
-      opacity: 0%;
-      margin-bottom: 0%;
-      
-  }
-  .gridit:hover .info{
-      opacity: 100%;
-  }*/
 
-  #anime{
-      height: 200px;
-      width: 200px;
-      background-color: cornflowerblue;
-      animation: animo 5s infinite;
-      text-align: center;
-  }
 
-  @keyframes animo{
-from{background-color: cornflowerblue; font-size: 2px; float:left;}
-to{background-color: crimson; font-size: 40px;float: right;}
 
-  }
 
  #picc{
      width:100px;
@@ -328,29 +195,42 @@ to{background-color: crimson; font-size: 40px;float: right;}
   /* https://www.youtube.com/watch?v=NdftnCDwKaU&list=PLKcDjNb_OGwMmRul5T03xG68DS8C4MeZ3&index=3 */
  :root{
     --boxColor: #0ff7;
+    --rotateSpeed: 30s;
+    --bounceSpeed: 1.5s;
 }
 
  .bg{
      background-color: #000;
-     min-height: 100vh;
+     min-height: 6.5em;
      display:flex;
+     margin: 1em;
      justify-content: center;
      align-items: center;
      font-size: 75px;
      perspective: 10em;
-     perspective-origin:50% calc(50% - 2em) ;
+     perspective-origin:50% calc(50% - 2.5em) ;
  }
 
  .scene{
      position: relative;
      transform-style:preserve-3d ;
+     animation: sceneRotate var(--rotateSpeed) infinite linear;
+     margin-left: 1em;
+    margin-right: 1em;
+    
+    
  }
+
+ @keyframes sceneRotate{
+     to{transform:rotateY(360deg) ;}
+ }
+
  .ball{
      width:1em;
      height:1em;
      border-radius: 50%;
      background:lightblue;
-     position: absolute;
+     position: fixed;
      left: -.5em;
      bottom:1em;
      background-image: radial-gradient(
@@ -358,15 +238,17 @@ to{background-color: crimson; font-size: 40px;float: right;}
          lightblue,
          #000
      );
+     animation:
+        ballBounce var(--bounceSpeed) infinite ease-out,
+     sceneRotate var(--rotateSpeed) infinite linear reverse;
  }
 
- .ballShadow{
-     position: absolute;
-     width: 100%;
-     height: 100%;
-     
-     background-image: radial-gradient(#0007, #0000 50%);
+ @keyframes ballBounce{
+     0%, 100% {bottom:0.5em;}
+     50% {bottom:2.5em; animation-timing-function: ease-in;}
  }
+
+
 
  .Cube{
      width: 2em;
@@ -374,9 +256,15 @@ to{background-color: crimson; font-size: 40px;float: right;}
     
 
      position: absolute;
-     top:-1em;
+     bottom:-1em;
      left:-1em;
+     animation:  cubeHeight var(--bounceSpeed) infinite linear;
  }
+
+ @keyframes cubeHeight{
+    0%, 100% {height: 1.5em;}
+    8%, 93.5% {height: 2em;}
+}
 
  .left, .right, .front, .back{
     position: absolute;
@@ -410,8 +298,8 @@ to{background-color: crimson; font-size: 40px;float: right;}
 }
 
 .floor{
-     width: 15em;
-     height: 15em;
+     width: 10em;
+     height: 10em;
      background-image:
      radial-gradient(#0000, #000 75%),
       repeating-conic-gradient(from 45deg, #111 0deg 90deg,#222 90deg 180deg);
@@ -420,6 +308,84 @@ to{background-color: crimson; font-size: 40px;float: right;}
     transform:translate(-50%,-50%)
     rotateX(90deg);
     top:1em;
+    
 
  }
  
+ #backg{
+     background-color: black;
+ } 
+ /*end of animation*/
+
+ #scirpt{
+     font-size: 11px;
+     color: #3b3b4e;
+     text-align: center;
+ }
+
+ /* item 5 */
+ 
+/*
+    Make sure to only make css changes to elements with your ID,
+    or children of elements with your ID
+*/ 
+
+#item5 {
+    
+    color:blue;
+    
+}
+#item5 .circle {
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;;
+    
+    background-color: #8a2be2;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate;
+}
+
+#item5 .square{
+    position: relative;
+    height: 50px;
+    width: 50px;;
+    
+    background-color: #83e22b;
+}
+#item5 img{
+    position: relative;
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    
+}
+
+#item5 button{
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    
+}
+
+@keyframes anime {
+    0% {
+        background: #d9c09c;
+      }
+      25% {
+        background: #ffffff;
+      }
+      50% {
+        background: #f3d1b8;
+      }
+      75% {
+        background: #f39874;
+      }
+      100% {
+        background: #647750;
+      }
+    }
+  
+    
