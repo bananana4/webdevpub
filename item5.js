@@ -1,83 +1,156 @@
-function receipt(){
+function addingPics(){
 
-let quizCont = document.getElementsByClassName("quiz-container");
+let aCont = document.getElementsByClassName("aContainer");
 
-/*btn1 = document.getElementsById("ing");
-
-btn1.addEventListener("click", function () {
-  alert("Button is clicked");
-});*/
-
-/*var radios = document.querySelectorAll('input[type=radio][name="contact"]');
-var radios2 = document.querySelectorAll('input[type=radio][name="contact"][id="apple"]');*/
-function row1(){
 
   var badios = document.querySelector("button")
   
 
-  let apple =  document.querySelector('input[id="apple"]');
-  let apricots = document.getElementById("apricots");
-  let strawberry = document.getElementById("strawberry");
-
-  let vanilla = document.getElementById("vanilla");
-  let flour = document.getElementById("flour");
-  let milk = document.getElementById("milk");
   
-  let egg = document.getElementById("egg");
-  let cream = document.getElementById("cream");
-  let sugar = document.getElementById("sugar");
-  
-  //fs
-  let aplVal = parseInt(apple.value);
-  let aprVal = parseInt(apricots.value);
-  let strVal = parseInt(strawberry.value);
-
-  let vanVal = parseInt(vanilla.value);
-  let floVal = parseInt(flour.value);
-  let milVal = parseInt(milk.value);
-
-  let eggVal = parseInt(egg.value);
-  let creVal = parseInt(cream.value);
-  let sugVal = parseInt(sugar.value);
-  //gs
-
-
-  let ingr = []
-  let topIngr = [apple,apricots, strawberry];
-  let midIngr = [vanilla,flour,milk];
-  let botIngr = [egg,cream,sugar];
   let huh = document.querySelector('h2');
   
 
   badios.addEventListener("click", function(){
     
-    for (let i = 0; i < ingr.length; i++){
+   
+    let result = parseInt(document.querySelector('input[name="contact1"]:checked').value) + parseInt(document.querySelector('input[name="contact2"]:checked').value) + parseInt(document.querySelector('input[name="contact3"]:checked').value);
       
-        if (document.querySelector('input[type="radio"]').checked == true){
-        
-      ingr.push(parseInt(document.querySelector('input[type="radio"]:checked').value));
-      }}
+
     
-    huh.innerText = parseInt(document.querySelector('input[id="vanilla"]:checked').value) + parseInt(document.querySelector('input[id="apple"]:checked').value);
+    
+      
+      
+      
+      function One() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/57e3d3444d51ac14f1dc8460962e33791c3ad6e04e507440752f78d0974cc2_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+      
+
+      function Two() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/55e8d7444e57a814f1dc8460962e33791c3ad6e04e5074417c2e7dd29744c7_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+      
+
+      function Three() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/57e2d54a4255a914f1dc8460962e33791c3ad6e04e50744172287ad2934cc3_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+      
+
+      function Four() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/53e3d44a4950aa14f1dc8460962e33791c3ad6e04e507440722d72d5944ccd_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+      
+
+      function Five() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/53e4d0444d5aad14f1dc8460962e33791c3ad6e04e507440722d72d5954ec2_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+
+      function Six() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/55e5d5444953ab14f1dc8460962e33791c3ad6e04e50744172297bd59749c5_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+
+      function Seven() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/speule-3000150_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+
+      function Eight() {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", "https://randomwordgenerator.com/img/picture-generator/51e6d0444c53b10ff3d8992cc12c30771037dbf852547849752c7fd79f4e_640.jpg");
+        x.setAttribute("width", "304");
+        x.setAttribute("height", "228");
+        x.setAttribute("alt", "The Pulpit Rock");
+        document.body.appendChild(x);
+      }
+      
+      function caseInSwitch(result) {
+        
+        switch(result){
+        case 111:
+        answer = One();
+        break;
+        case 112:
+          answer = Two();
+        break;
+        case 121:
+          answer = Three();
+        break;
+        case 122:
+          answer = Four();
+        break
+        case 211:
+          answer = Five();
+        break
+        case 212:
+          answer = Six();
+          break
+        case 221:
+          answer = Seven();
+          break
+      case 222:
+          answer = Eight();
+          break
+       
+        }
+        return answer;
+        }
+        caseInSwitch(result);
+      
+      
+      
+  
   });
 
-  
-
-  //wow.forEach(radio => badios.addEventListener('click', () => alert(all)));
-  //return (vanilla + apple)
-  
-}
-row1();
-/*let apple = document.querySelectorAll('[id="apple"]');
-let vanilla = document.querySelectorAll('[id="vanilla"]');
-
-var badios = document.querySelector("button")
-
-document.querySelectorAll('input[type="radio"][name="contact1]')
+    /*let div = document.createElement("DIV");
+    image.id = "photo";
     
+    let img = document.createElement("IMG");
+    img.src("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU3vxMkwObNrazxqYlSYqOJJdhBzpHN7LQ1g&usqp=CAU");
 
-    return (vanilla + apple)*/
+    
+    div.append('img');
+    quizCont.append('div');*/
+    var remv = document.querySelector('[id="rem"]')
+    remv.addEventListener("click", function(){
+      location.reload();
+    return false;
+    })
+      
 
 }
 
-receipt();
+addingPics();

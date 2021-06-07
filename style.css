@@ -6,39 +6,7 @@
     
 }
 
-.textleft{
-    text-align: left;
-}
 
-.header{
-    color:#7d29c6;
-    margin:1%;
-}
-pre{
-    text-align: left;
-}
-p{
-    columns: 35px 2;
-}
-
-.flex{
-    display: flex;
-  background-color: #4f176c;
-  flex-direction: column-reverse;
-}
-.flex > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-  }
-  @media screen and (max-width:600px){.flex > div{
-    
-    padding: 10px;
-    font-size: 10px;
-  }
-      
-  }
 
   img{
       width: 500px;
@@ -51,6 +19,8 @@ p{
       right: 57px;
       bottom: 10px;
   } 
+
+  /* nav */
 
   header{
      
@@ -70,12 +40,14 @@ p{
     margin: none;
     height: 10%;
     width: 10%;
+    margin-left: 0.5em;
 }
  
 #logo img{
     width: 60%;
     float: left;
     padding: 10px 0px;
+    
 }   
 
 #menu{
@@ -91,7 +63,7 @@ p{
     text-align: center;
     float:center;
     margin: none;
-    background: #ff8a3c;
+    background: #a6bccf;
     
 }
      
@@ -122,12 +94,12 @@ p{
     text-decoration: none;
 }
 
-
+/* welcome */
 
 .imageContainer {
     width: 100%;
     height: 600px;
-    background-image: url(https://randomwordgenerator.com/img/picture-generator/53e2d3454252a914f1dc8460962e33791c3ad6e04e50744074267bd59e44cd_640.jpg);
+    background-image: url(https://cdn.wallpapersafari.com/33/74/SXz0qL.jpg);
     image-rendering:pixelated;
     background-size:100% 600px;
     text-align: center;
@@ -151,8 +123,10 @@ p{
 .imageContainertwo {
     width: 100%;
     height: 600px;
-    background-image: url(https://randomwordgenerator.com/img/picture-generator/57e2d6414c51af14f1dc8460962e33791c3ad6e04e507441722978d6934cc3_640.jpg);
+    background-image: url(https://cdn.wallpapersafari.com/33/74/SXz0qL.jpg);
+    transform: rotate(20deg);
     text-align: center;
+    image-rendering:pixelated;
     font-size: 16px;
     margin-bottom: 10px;
     margin-top: justify;
@@ -176,21 +150,19 @@ p{
     font-size: 30px;
     height: 75%;
     width: 75%;
-    background-image: url("https://randomwordgenerator.com/img/picture-generator/55e7dc434957a814f1dc8460962e33791c3ad6e04e507440742a7ad6964bc1_640.jpg");
+    background-image: url("https://randomwordgenerator.com/img/picture-generator/55e6dd474351a914f1dc8460962e33791c3ad6e04e507440762879dc9349c6_640.jpg");
   }
 
   .gridit:hover{
       opacity: 50%;
   }
 
-
-
-
-
  #picc{
      width:100px;
      height: 200px;
  }
+
+ /* 3d animation*/
 
   /* https://www.youtube.com/watch?v=NdftnCDwKaU&list=PLKcDjNb_OGwMmRul5T03xG68DS8C4MeZ3&index=3 */
  :root{
@@ -319,73 +291,70 @@ p{
 
  #scirpt{
      font-size: 11px;
-     color: #3b3b4e;
+     color: #ffffff;
      text-align: center;
+     columns: 1;
  }
 
- /* item 5 */
+ /* item 5 + othrs */
  
-/*
-    Make sure to only make css changes to elements with your ID,
-    or children of elements with your ID
-*/ 
+#row1{
+   background-color: rgb(146, 168, 196);
+   padding: 1em;
+   margin-left: 43%;
+   margin-right: 43%;
+   margin-bottom: 1em;
+   border-radius: 10px;
+   
+}
+#row2{
+    background-color: rgb(146, 168, 196);
+    padding: 1em;
+    margin-left: 43%;
+    margin-right: 43%;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    
+ }
 
-#item5 {
+ #row3{
+    background-color: rgb(146, 168, 196);
+    padding: 1em;
+    margin-left: 43%;
+    margin-right: 43%;
+    margin-bottom: 1em;
+    border-radius: 10px;
     
-    color:blue;
-    
-}
-#item5 .circle {
-    position: relative;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;;
-    
-    background-color: #8a2be2;
-    animation-name: anime;
-    animation-duration: 10s;
-    animation-iteration-count:infinite;
-    animation-direction: alternate;
-}
+ }
 
-#item5 .square{
-    position: relative;
-    height: 50px;
-    width: 50px;;
-    
-    background-color: #83e22b;
+#ground{
+    background-color: #00001a;
 }
-#item5 img{
-    position: relative;
-    margin: auto;
-    height: 400px;
-    width: 400px;
-    
-}
-
-#item5 button{
-    width: 500px;
-    height: 50px;
-    position: absolute;
-    
+ 
+.aContainer{
+    background-color: whitesmoke;
+   margin-left: 10%;
+   margin-right: 10%;
+   border-radius: 15px;
+   padding-bottom: .25em; 
+   padding-top: 1em;
+   margin-top: 1em;
 }
 
-@keyframes anime {
-    0% {
-        background: #d9c09c;
-      }
-      25% {
-        background: #ffffff;
-      }
-      50% {
-        background: #f3d1b8;
-      }
-      75% {
-        background: #f39874;
-      }
-      100% {
-        background: #647750;
-      }
-    }
-  
-    
+button{
+    background-color: orange;
+}
+
+.bContainer{
+    background-color: whitesmoke;
+   margin-left: 10%;
+   margin-right: 10%;
+   border-radius: 15px;
+   padding-bottom: .25em; 
+   padding-top: 1em;
+   margin-top: 1em;
+}
+
+.marg{
+    margin-top: 1em;
+}
